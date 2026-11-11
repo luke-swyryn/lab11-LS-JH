@@ -13,7 +13,7 @@ class TestCalculator(unittest.TestCase):
     def test_subtract(self): # 3 assertions
         self.assertEqual(subtract(6, 5), 1)
         self.assertEqual(subtract(-3, -22), 19)
-        self.assertEqual(subtract(0, 4) -4)
+        self.assertEqual(subtract(0, 4), -4)
     # ##########################
 
     ####### Partner 1
@@ -33,8 +33,8 @@ class TestCalculator(unittest.TestCase):
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
-        with self.assertRaises(ValueError):
-            div(6,0)
+        with self.assertRaises(ZeroDivisionError):
+            div(0,6)
     #
     def test_logarithm(self): # 3 assertions
         self.assertEqual(logarithm(2, 8), 3)
